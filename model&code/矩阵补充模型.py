@@ -20,10 +20,9 @@ print(len(user_ids),len(moive_data))
 
 
 class MovieDataset(Dataset):
-    def __init__(self, user_data, moive_data, vectorizer, positive_threshold=3):
+    def __init__(self, user_data, moive_data, positive_threshold=3):
         self.user_data = user_data
         self.moive_data = moive_data
-        self.vectorizer = vectorizer
         self.positive_threshold = positive_threshold
         self.user_ids = user_data['userId'].unique()
         self.movie_ids = moive_data['movieId'].unique()
@@ -46,3 +45,8 @@ class MovieDataset(Dataset):
             'movie_id': torch.tensor(int(movie_index)),
             'label': torch.tensor(label),
         }
+
+
+
+movie_dataset = MovieDataset(user_data, moive_data)
+

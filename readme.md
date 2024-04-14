@@ -51,3 +51,8 @@
 
 
 [神秘连接](https://pytorch.org/tutorials/)
+
+
+思考：用id做embeding的时候 线上新加入的id怎么办呢？Embeding层维度岂不是会改变吗？怎么处理的呢？
+
+

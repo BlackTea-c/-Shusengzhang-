@@ -112,7 +112,7 @@ class NeuralNetwork(nn.Module):
         return similarity_score
 num_users=max(user_ids)+1
 num_moives=len(moive_data['movieId'])
-embedding_dim=300
+embedding_dim=10
 
 model = NeuralNetwork(num_users,num_moives,embedding_dim)
 import torch.optim as optim
